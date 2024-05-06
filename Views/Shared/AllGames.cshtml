@@ -13,26 +13,26 @@
                 @if (@Model.IsAvailable)
                 {
                     <h5 style="display:inline;float:left;">@Model.Name</h5>
-                    <p style="display:inline;float:right;">В наличии</p>
+                    <p style="display:inline;float:right;">В наявності</p>
                     <hr style="clear:both;"/>
                 } else
                 {
                     <h5 style="display:inline;float:left;">@Model.Name</h5>
-                    <p style="display:inline;float:right;">Нет в наличии</p>
+                    <p style="display:inline;float:right;">Немає в наявності</p>
                     <hr style="clear:both;"/>
                 }
             <p class="card-text">@Model.Desc</p>
               <div class="d-flex justify-content-between align-items-center">
-                    <h6>@Model.Price.ToString("c", new CultureInfo("ru-RU"))</h6>
+                    <h6>@Model.Price.ToString("c", new CultureInfo("ua-UA"))</h6>
                 @if (@Model.IsAvailable)
                 {
                     <div class="btn-group">
-                        <a class="btn btn-sm btn-success" asp-controller="ShopCart" asp-action="addToCart" asp-route-id="@Model.Id">Добавить в корзину</a>
+                        <a class="btn btn-sm btn-success" asp-controller="ShopCart" asp-action="addToCart" asp-route-id="@Model.Id">Додати в корзину</a>
                     </div>
                 } else 
                 {
                     <div class="btn-group">
-                        <a class="btn btn-sm btn-outline-secondary">Скоро он будет вашим!</a>
+                        <a class="btn btn-sm btn-outline-secondary">Скоро він буде вашим!</a>
                     </div>
                 }
             </div>
